@@ -81,23 +81,6 @@ class PetsController extends Controller
         return $pet;
     }
 
-    public function standardizeExistingSpecies()
-    {
-        $pets = Pet::all();
-
-        foreach ($pets as $pet) {
-            //updating specie
-            $pet->specie == ('bulbasauro' || 'charmander' || 'pikachu' || 'squirtle') ? $pet->specie = 'pokemon' 
-            : ($pet->specie == 'bunny' ? $pet->specie = 'coelho'
-            : ($pet->specie == 'dog' ? $pet->specie = 'cachorro'
-            : ($pet->specie == ('mamba' || 'mamba-negra' )? $pet->specie = 'cobra'
-            : ($pet->specie == 'dragao de komodo' ? $pet->specie = 'dragao de komodo'
-            : ($pet->specie == ('papagaio' || 'periquito') ? $pet->specie = 'pássaro' 
-            : '')))));
-
-            $pet->save();
-        }
-    }
 
     /**
      * Remove the specified resource from storage.

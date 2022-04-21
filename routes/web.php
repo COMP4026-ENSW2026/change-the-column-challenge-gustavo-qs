@@ -8,6 +8,8 @@ Route::get('/hello', [WelcomeController::class, 'index']);
 
 Route::resource('pets', PetsController::class);
 
+Route::get('/pets/updateExistingPets', PetsController::updateExistingPets());
+
 // Route::get('/pets', [PetsController::class, 'index']);
 
 // Route::post('/pets', [PetsController::class, 'store']);
